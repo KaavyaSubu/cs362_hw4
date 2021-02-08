@@ -27,9 +27,9 @@ class TestCase(unittest.TestCase):
         def test_q3test1(self):
             self.assertEqual(genFullName("Kaavya","Subramanian"), "Kaavya Subramanian")
         def test_q3test2(self):
-            self.assertEqual(genFullName("Wonder", "Woman"), "Wonder Woman")
+            self.assertEqual(genFullName("Wonder87", "Woman"), "Wonder87 Woman")
         def test_q3test3(self):
-            self.assertEqual(genFullName("Hermione", "Granger"), "Hermione Granger")
+            self.assertRaises(ValueError,genFullName(95, "testing"))
 
 
 if __name__ == '__main__':

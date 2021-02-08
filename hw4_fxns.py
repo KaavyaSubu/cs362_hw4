@@ -44,5 +44,10 @@ def calcListAvg(l):
  # Code for Question 3
 
 def genFullName(first, last):
-
-    return str(first) + " " + str(last)
+    try:
+        if not isinstance(first, str) or not isinstance(last, str):
+            raise ValueError
+        else:
+            return str(first) + " " + str(last)
+    except ValueError:
+        print("String was not entered.")
